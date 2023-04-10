@@ -1,16 +1,4 @@
 name: Deploy Source
-
-on:
-  push:
-    branches: [ "main" ]
-
-jobs:
-  deploy:
-    # Add 'id-token' with the intended permissions for workload identity federation
-    permissions:
-      contents: 'read'
-      id-token: 'write'
-
 # DEPLOY
 - uses: daikikatsuragawa/clasp-action@v1.1.0
   with:
