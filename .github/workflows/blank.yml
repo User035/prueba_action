@@ -20,7 +20,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-//DEPLOY
+# DEPLOY
 - name: Clasp Action
 - uses: daikikatsuragawa/clasp-action@v1.1.0
   with:
@@ -34,7 +34,7 @@ jobs:
     description: 'Sample description'
     deployId: ${{ secrets.DEPLOY_ID }}
 
-//PUSH
+# PUSH
 - name: Clasp Action
   uses: daikikatsuragawa/clasp-action@v1.1.0
   with:
