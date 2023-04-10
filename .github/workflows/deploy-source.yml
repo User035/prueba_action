@@ -1,0 +1,37 @@
+name: Deploy Source
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    # Add 'id-token' with the intended permissions for workload identity federation
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+# DEPLOY
+- uses: daikikatsuragawa/clasp-action@v1.1.0
+  with:
+    accessToken: ${{ secrets.ACCESS_TOKEN }}
+    idToken: ${{ secrets.ID_TOKEN }}
+    refreshToken: ${{ secrets.REFRESH_TOKEN }}
+    clientId: ${{ secrets.CLIENT_ID }}
+    clientSecret: ${{ secrets.CLIENT_SECRET }}
+    scriptId: ${{ secrets.SCRIPT_ID }}
+    command: 'deploy'
+    description: 'Sample description'
+    deployId: ${{ secrets.DEPLOY_ID }}
+
+# PUSH
+- uses: daikikatsuragawa/clasp-action@v1.1.0
+  with:
+    accessToken: ${{ secrets.ACCESS_TOKEN }}
+    idToken: ${{ secrets.ID_TOKEN }}
+    refreshToken: ${{ secrets.REFRESH_TOKEN }}
+    clientId: ${{ secrets.CLIENT_ID }}     
+    clientSecret: ${{ secrets.CLIENT_SECRET }}
+    scriptId: ${{ secrets.SCRIPT_ID }}
+    rootDir: 'src'
+    command: 'push'
