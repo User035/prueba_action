@@ -1,5 +1,4 @@
-name: CLASP
-
+name: Clasp Action
 on: [push]
 
 jobs:
@@ -7,7 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
   # DEPLOY
-    - name: Clasp Action
     - uses: daikikatsuragawa/clasp-action@v1.1.0
       with:
         accessToken: ${{ secrets.ACCESS_TOKEN }}
