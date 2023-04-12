@@ -1,6 +1,4 @@
 function HelloWorld() 
-{
-  var ui = SpreadsheetApp.getUi()
-
-  ui.alert("Hola Mundo!!!!");
+{ 
+  console.log("Hola Mundo!!!!");
 };
