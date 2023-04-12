@@ -14,7 +14,7 @@ jobs:
         clientId: ${{ secrets.CLIENTID }}
         clientSecret: ${{ secrets.CLIENTSECRET }}
         scriptId: ${{ secrets.SCRIPTID }}
-        rootDir: 'src'
+        rootDir: '.'
         command: 'push'
         description: 'Sample description'
         deployId: ${{ secrets.DEPLOYID }}
