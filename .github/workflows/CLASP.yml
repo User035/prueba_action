@@ -8,13 +8,13 @@ jobs:
   # DEPLOY
     - uses: daikikatsuragawa/clasp-action@v1.1.0
       with:
-        accessToken: ${{ secrets.ACCESS_TOKEN }}
-        idToken: ${{ secrets.ID_TOKEN }}
-        refreshToken: ${{ secrets.REFRESH_TOKEN }}
-        clientId: ${{ secrets.CLIENT_ID }}
-        clientSecret: ${{ secrets.CLIENT_SECRET }}
-        scriptId: ${{ secrets.SCRIPT_ID }}
+        accessToken: ${{ secrets.ACCESSTOKEN }}
+        idToken: ${{ secrets.IDTOKEN }}
+        refreshToken: ${{ secrets.REFRESHTOKEN }}
+        clientId: ${{ secrets.CLIENTID }}
+        clientSecret: ${{ secrets.CLIENTSECRET }}
+        scriptId: ${{ secrets.SCRIPTID }}
         command: 'deploy'
         description: 'Sample description'
-        deployId: ${{ secrets.DEPLOY_ID }}
+        deployId: ${{ secrets.DEPLOYID }}
 
