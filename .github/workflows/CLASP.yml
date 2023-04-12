@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-  # DEPLOY
+  # PUSH
     - uses: daikikatsuragawa/clasp-action@v1.1.0
       with:
         accessToken: ${{ secrets.ACCESSTOKEN }}
@@ -14,7 +14,8 @@ jobs:
         clientId: ${{ secrets.CLIENTID }}
         clientSecret: ${{ secrets.CLIENTSECRET }}
         scriptId: ${{ secrets.SCRIPTID }}
-        command: 'deploy'
+        rootDir: ${{ secrets.ROOTDIR }}
+        command: 'push'
         description: 'Sample description'
         deployId: ${{ secrets.DEPLOYID }}
 
