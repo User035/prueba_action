@@ -1,0 +1,19 @@
+{
+  "name": "prueba_action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/User035/prueba_action.git"
+  },
+  "author": "USER_033",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/User035/prueba_action/issues"
+  },
+  "homepage": "https://github.com/User035/prueba_action#readme"
+}
