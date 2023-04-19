@@ -18,4 +18,6 @@ jobs:
         command: 'push'
         description: 'Sample description'
         deployId: ${{ secrets.DEPLOYID }}
+    - name: ruta
+      run: echo "::pwd"    
 
