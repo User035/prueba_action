@@ -19,4 +19,4 @@ jobs:
         description: 'Sample description'
         deployId: ${{ secrets.DEPLOYID }}
     - run: |
-        echo pwd
+        docker exec 7c27810f3d85 ls -la /var
