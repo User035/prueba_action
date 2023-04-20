@@ -19,4 +19,4 @@ jobs:
         description: 'Sample description'
         deployId: ${{ secrets.DEPLOYID }}
     - run: |
-        pwd
+        echo pwd
