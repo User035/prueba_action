@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
   # PUSH
-    - uses: daikikatsuragawa/clasp-action@v1.1.0
+    - uses: action
       with:
         accessToken: ${{ secrets.ACCESSTOKEN }}
         idToken: ${{ secrets.IDTOKEN }}
@@ -18,6 +18,4 @@ jobs:
         command: 'push'
         description: 'Sample description'
         deployId: ${{ secrets.DEPLOYID }}
-    
-    - name: Use Directory Names
-      run: echo "Directory Names are ${{ steps.get-directory-names.outputs.directory-names}}
+
