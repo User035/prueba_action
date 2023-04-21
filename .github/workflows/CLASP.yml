@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
   # PUSH
-    - uses: action
+    - uses: action@v1.1.0
       with:
         accessToken: ${{ secrets.ACCESSTOKEN }}
         idToken: ${{ secrets.IDTOKEN }}
