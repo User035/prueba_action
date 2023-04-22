@@ -1,12 +1,16 @@
 name: Clasp Action
 on: [push]
 
+defaults:
+  run:
+    working-directory:  ${{ secrets.ROOTDIR }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
   # PUSH
-    - uses: ./action
+    - uses: daikikatsuragawa/clasp-action@v1.1.0
       with:
         accessToken: ${{ secrets.ACCESSTOKEN }}
         idToken: ${{ secrets.IDTOKEN }}
