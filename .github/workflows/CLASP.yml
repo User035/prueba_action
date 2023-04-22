@@ -1,10 +1,5 @@
 name: Clasp Action
 on: [push]
-
-defaults:
-  run:
-    working-directory:  ${{ secrets.ROOTDIR }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
