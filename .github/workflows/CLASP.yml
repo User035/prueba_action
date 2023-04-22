@@ -1,9 +1,6 @@
 name: Clasp Action
 on: [push]
 
-defaults:
-  run:
-    working-directory:  src
 jobs:
   build:
     runs-on: ubuntu-latest
