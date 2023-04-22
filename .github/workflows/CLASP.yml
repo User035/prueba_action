@@ -3,8 +3,7 @@ on: [push]
 
 defaults:
   run:
-    working-directory:  ${{ secrets.ROOTDIR }}
-
+    working-directory:  src
 jobs:
   build:
     runs-on: ubuntu-latest
