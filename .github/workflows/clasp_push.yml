@@ -19,7 +19,7 @@ jobs:
       - run: npm install -g @google/clasp
       - run: cd ..
       - run: ls      
-      - run:  entrypoint.sh
+      - run: sh entrypoint.sh
 
 
 
