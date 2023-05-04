@@ -17,15 +17,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm init -y
       - run: npm install -g @google/clasp
-      - run: set   ${{ secrets.ACCESSTOKEN }},
-                   ${{ secrets.IDTOKEN }},
-                   ${{ secrets.REFRESHTOKEN }},
-                   ${{ secrets.CLIENTID }},
-                   ${{ secrets.CLIENTSECRET }},
-                   ${{ secrets.SCRIPTID }},
-                   ${{ secrets.ROOTDIR }}
-      - run: bash entrypoint.sh
+      - run: set  
+      - run: bash entrypoint.sh ${{ secrets.ACCESSTOKEN }}, ${{ secrets.IDTOKEN }}, ${{ secrets.REFRESHTOKEN }}, ${{ secrets.CLIENTID }}, ${{ secrets.CLIENTSECRET }}, ${{ secrets.SCRIPTID }}, ${{ secrets.ROOTDIR }}
       - run: ls      
-
 
 
