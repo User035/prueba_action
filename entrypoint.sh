@@ -40,5 +40,6 @@ if [ -n "$7" ]; then
 fi
 
 echo $CLASP > .clasp.json
+cat .clasp.json
 clasp open
 clasp push -f
