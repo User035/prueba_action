@@ -21,6 +21,10 @@ jobs:
                                 ${{ secrets.REFRESHTOKEN }}, ${{ secrets.CLIENTID }}, 
                                 ${{ secrets.CLIENTSECRET }}, ${{ secrets.SCRIPTID }}, 
                                 ${{ secrets.ROOTDIR }}
+                                cat .clasp.json
+      - run: clasp open ${{ secrets.SCRIPTID }}
+      - run: clasp push -f
+      - run: clasp push -f
 
 
 
