@@ -1,7 +1,5 @@
 #!/bin/sh -l
 
-#!/bin/sh -l
-
 CLASPRC=$(cat <<-END
     {
         "token": {
