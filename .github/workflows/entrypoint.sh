@@ -3,15 +3,15 @@
 CLASPRC=$(cat <<-END
     {
         "token": {
-            "access_token": "$1",
-            "refresh_token": "$3",
+            "access_token": "${{ secrets.ACCESSTOKEN }}",
+            "refresh_token": "${{ secrets.REFRESHTOKEN }}",
             "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/service.management https://www.googleapis.com/auth/script.deployments https://www.googleapis.com/auth/logging.read https://www.googleapis.com/auth/script.webapp.deploy https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/script.projects https://www.googleapis.com/auth/drive.metadata.readonly",
             "token_type": "Bearer",
-            "id_token": "$2"
+            "id_token": "${{ secrets.IDTOKEN }}"
         },
         "oauth2ClientSettings": {
-            "clientId": "$4",
-            "clientSecret": "$5",
+            "clientId": "${{ secrets.CLIENTID }}",
+            "clientSecret": "${{ secrets.CLIENTSECRET }}",
             "redirectUri": "http://localhost"
         },
         "isLocalCreds": false
@@ -23,44 +23,20 @@ echo $CLASPRC > ~/.clasprc.json
 
 CLASP=$(cat <<-END
     {
-        "scriptId": "$6"
+        "scriptId": "${{ secrets.SCRIPTID }}"
     }
 END
 )
 
-if [ -n "$7" ]; then
-  if [ -e "$7" ]; then
-    cd "$7"
+if [ -n "${{ secrets.ROOTDIR }}" ]; then
+  if [ -e "${{ secrets.ROOTDIR }}" ]; then
+    cd "${{ secrets.ROOTDIR }}"
   else
-    echo "rootDir is invalid."
+    echo "rootDir is invalid. ${{ secrets.ROOTDIR }}"
     exit 1
   fi
 fi
 
 echo $CLASP > .clasp.json
 clasp open
-
-if [ "$8" = "push" ]; then
-  clasp push -f
-elif [ "$8" = "deploy" ]; then
-  if [ -n "$9" ]; then
-    clasp push -f
-
-    if [ -n "${10}" ]; then
-      clasp deploy --description $9 -i ${10}
-    else
-      clasp deploy --description $9
-    fi
-  else
-    clasp push -f
-
-    if [ -n "${10}" ]; then
-      clasp deploy -i ${10}
-    else
-      clasp deploy
-    fi
-  fi
-else
-  echo "command is invalid."
-  exit 1
-fi
+clasp push -f
