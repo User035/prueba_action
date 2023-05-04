@@ -17,7 +17,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm init -y
       - run: npm install -g @google/clasp
-      - run: ls
+      - run: pwd
       - run:  ENTRYPOINT ["/entrypoint.sh"]
 
 
