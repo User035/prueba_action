@@ -21,6 +21,6 @@ jobs:
                                 ${{ secrets.REFRESHTOKEN }}, ${{ secrets.CLIENTID }}, 
                                 ${{ secrets.CLIENTSECRET }}, ${{ secrets.SCRIPTID }}, 
                                 ${{ secrets.ROOTDIR }}
-      - run: ls      
+
 
 
