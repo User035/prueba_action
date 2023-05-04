@@ -2,7 +2,7 @@ name: Clasp_push
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs:
     using: 'docker'
     image: 'Dockerfile'
      args:
