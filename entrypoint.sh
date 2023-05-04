@@ -4,10 +4,10 @@ CLASPRC=$(cat <<-END
     {
         "token": {
             "access_token": "$1",
-            "refresh_token": ${{ secrets.REFRESHTOKEN }},
+            "refresh_token": "${{ secrets.REFRESHTOKEN }}",
             "scope": "https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/service.management https://www.googleapis.com/auth/script.deployments https://www.googleapis.com/auth/logging.read https://www.googleapis.com/auth/script.webapp.deploy https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/script.projects https://www.googleapis.com/auth/drive.metadata.readonly",
             "token_type": "Bearer",
-            "id_token": ${{ secrets.IDTOKEN }}
+            "id_token": "${{ secrets.IDTOKEN }}"
         },
         "oauth2ClientSettings": {
             "clientId": "${{ secrets.CLIENTID }}",
