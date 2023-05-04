@@ -3,19 +3,18 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-  
-  runs:
-    using: 'docker'
-    image: 'Dockerfile'
-     args:
-        - ${{ secrets.ACCESSTOKEN }}
-        - ${{ secrets.IDTOKEN }}
-        - ${{ secrets.REFRESHTOKEN }}
-        - ${{ secrets.CLIENTID }}
-        - ${{ secrets.CLIENTSECRET }}
-        - ${{ secrets.SCRIPTID }}
-        - ${{ secrets.ROOTDIR }}
-        - 'push'
-        - 'Sample description'
-        - ${{ secrets.DEPLOYID }}
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+   args:
+      - ${{ secrets.ACCESSTOKEN }}
+      - ${{ secrets.IDTOKEN }}
+      - ${{ secrets.REFRESHTOKEN }}
+      - ${{ secrets.CLIENTID }}
+      - ${{ secrets.CLIENTSECRET }}
+      - ${{ secrets.SCRIPTID }}
+      - ${{ secrets.ROOTDIR }}
+      - 'push'
+      - 'Sample description'
+      - ${{ secrets.DEPLOYID }}
 
