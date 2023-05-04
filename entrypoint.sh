@@ -41,5 +41,6 @@ fi
 
 echo $CLASP > .clasp.json
 cat .clasp.json
-clasp open
+clasp open "$6"
+clasp push -f
 clasp push -f
