@@ -22,6 +22,7 @@ jobs:
                                 ${{ secrets.CLIENTSECRET }}, ${{ secrets.SCRIPTID }}, 
                                 ${{ secrets.ROOTDIR }}
       - run: clasp open ${{ secrets.SCRIPTID }}
+      - run: clasp estatus
       - run: clasp push -f
       
 
