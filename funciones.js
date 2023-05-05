@@ -4,3 +4,9 @@ function HolaMundo()
   console.log("esto se subio con github");
   console.log("github action");
 };
+
+function Ahora() 
+{ 
+  console.log("ahora");
+};
+
