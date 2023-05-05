@@ -7,7 +7,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [18.7]
 
     steps:
       - uses: actions/checkout@v3
@@ -21,7 +21,6 @@ jobs:
                                 ${{ secrets.REFRESHTOKEN }}, ${{ secrets.CLIENTID }}, 
                                 ${{ secrets.CLIENTSECRET }}, ${{ secrets.SCRIPTID }}, 
                                 ${{ secrets.ROOTDIR }}
-      - run: ls                          
       - run: clasp open ${{ secrets.SCRIPTID }}
       - run: clasp push -f
       
