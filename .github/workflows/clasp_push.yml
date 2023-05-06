@@ -17,14 +17,15 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm init -y
       - run: npm install -g @google/clasp
-      - run: bash entrypoint.sh ${{secrets.ACCESSTOKEN }}, ${{ secrets.IDTOKEN }}, 
-                                ${{ secrets.REFRESHTOKEN }}, ${{ secrets.CLIENTID }}, 
-                                ${{ secrets.CLIENTSECRET }}, "1LZWFrEtUFKAzao0FvEMky-3KQ_Hu2IzD6c3LmFugA0IBZu2C7YWVisgo", 
-                                ${{ secrets.ROOTDIR }}
-      - run: clasp open ${{ secrets.SCRIPTID }}
+      - run: bash entrypoint.sh "${{secrets.ACCESSTOKEN }}",   "${{ secrets.IDTOKEN }}", 
+                                "${{ secrets.REFRESHTOKEN }}", "${{ secrets.CLIENTID }}", 
+                                "${{ secrets.CLIENTSECRET }}", "${{ secrets.SCRIPTID }}", 
+                                "${{ secrets.ROOTDIR }}"
+      - run: clasp open "${{ secrets.SCRIPTID }}"
       - run: clasp status
       - run: clasp push -f
       
+
 
 
 
