@@ -19,7 +19,7 @@ CLASPRC=$(cat <<-END
 END
 )
 
-echo $CLASPRC > .clasprc.json
+echo $CLASPRC > ~/.clasprc.json
 
 CLASP=$(cat <<-END
     {
