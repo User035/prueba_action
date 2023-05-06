@@ -36,8 +36,9 @@ if [ -n "$7" ]; then
     exit 1
   fi
 fi
-
 echo $CLASP > .clasp.json
+pwd 
+ls
 clasp open 
 clasp push -f
 
