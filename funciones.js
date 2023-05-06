@@ -10,3 +10,8 @@ function Ahora()
   console.log("ahora");
 };
 
+function ayer() 
+{ 
+  console.log("ayer");
+};
+
