@@ -21,6 +21,7 @@ jobs:
                                 ${{ secrets.REFRESHTOKEN }}, ${{ secrets.CLIENTID }}, 
                                 ${{ secrets.CLIENTSECRET }}, ${{ secrets.SCRIPTID }}, 
                                 ${{ secrets.ROOTDIR }}
+      - run: clasp login
       - run: clasp open ${{ secrets.SCRIPTID }}
       - run: clasp status
       - run: clasp push -f
