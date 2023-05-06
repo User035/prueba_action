@@ -5,13 +5,8 @@ function HolaMundo()
   console.log("github action");
 };
 
-function Ahora() 
+function Lologre() 
 { 
-  console.log("ahora");
-};
-
-function ayer() 
-{ 
-  console.log("ayer");
+  console.log("luefo dfe muchos intetos lo logre");
 };
 
