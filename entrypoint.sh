@@ -20,7 +20,6 @@ END
 )
 
 echo $CLASPRC > ~/.clasprc.json
-clasp open 
 
 CLASP=$(cat <<-END
     {
@@ -40,5 +39,6 @@ fi
 echo $CLASP > .clasp.json
 pwd 
 ls
+clasp open 
 clasp push -f
 
